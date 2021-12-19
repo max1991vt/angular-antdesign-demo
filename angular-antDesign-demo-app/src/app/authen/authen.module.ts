@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from '../authen/register/register.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ZoroAntdModule } from '../zoro-antd.module';
+import { LayoutAuthenComponent } from '../layouts/layout-authen/layout-authen.component';
 
 const routes: Routes = [
   {
@@ -11,7 +12,8 @@ const routes: Routes = [
   }
 ]
 const COMPONENTS = [
-  RegisterComponent
+  RegisterComponent,
+  LayoutAuthenComponent
 ]
 
 const MODULES = [

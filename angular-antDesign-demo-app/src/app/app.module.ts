@@ -31,7 +31,8 @@ const MODULES = [
   ZoroAntdModule,
   ShopModule,
   AdminModule,
-  AuthenModule
+  AuthenModule,
+  RouterModule
 ]
 
 @NgModule({
