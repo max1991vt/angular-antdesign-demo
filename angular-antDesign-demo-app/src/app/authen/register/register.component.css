@@ -1,0 +1,19 @@
+[nz-form] {
+  background: #fff;
+  padding: 25px; 
+  max-width: 600px;
+  margin:auto;
+  margin-top: 200px; 
+  border-radius: 25px;
+  box-shadow: 0px 10px 25px 5px #0000000f
+  }
+  .head{
+    text-align:center
+  }
+  .phone-select {
+    width: 70px;
+  }
+
+  .register-are {
+    margin-bottom: 8px;
+  }
