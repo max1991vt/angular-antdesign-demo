@@ -6,6 +6,8 @@ import { ZoroAntdModule } from '../zoro-antd.module';
 import { LayoutAuthenComponent } from '../layouts/layout-authen/layout-authen.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -15,12 +17,22 @@ const routes: Routes = [
   {
     path: 'dang-ky',
     component: RegisterComponent,
+  },
+  {
+    path: 'quen-mat-khau',
+    component: ForgotPasswordComponent,
+  },
+  {
+    path: 'doi-mat-khau',
+    component: ResetPasswordComponent,
   }
 ]
 const COMPONENTS = [
   LayoutAuthenComponent,
   RegisterComponent,
-  LoginComponent
+  LoginComponent, 
+  ForgotPasswordComponent, 
+  ResetPasswordComponent
 ]
 
 const MODULES = [
