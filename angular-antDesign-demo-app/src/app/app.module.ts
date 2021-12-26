@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
 
 
 const COMPONENTS = [
-  AppComponent
+  AppComponent,
 ]
 const MODULES = [
   BrowserModule,
@@ -31,7 +31,8 @@ const MODULES = [
   ShopModule,
   AdminModule,
   AuthenModule,
-  RouterModule
+  RouterModule,
+
 ]
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { LayoutShopComponent } from './layouts/layout-shop/layout-shop.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { LayoutAuthenComponent } from './layouts/layout-authen/layout-authen.component';
 
@@ -23,6 +23,7 @@ const routes: Routes = [
         loadChildren: () =>
           import('../app/authen/authen.module').then((m) => m.AuthenModule),
       },
+      
     ],
   },
 
@@ -49,10 +50,19 @@ const routes: Routes = [
       },
     ],
   },
+
+  // default router
+  {
+    path: '**',
+    redirectTo: '/authen/404',
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    useHash: true,
+    preloadingStrategy: PreloadAllModules
+  }),],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
