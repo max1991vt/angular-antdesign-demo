@@ -39,23 +39,27 @@ const routes: Routes = [
     ],
   },
 
-  {
-    path: 'shop',
-    component: LayoutShopComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: () =>
-          import('../app/shop/shop.module').then((m) => m.ShopModule),
-      },
-    ],
-  },
+  // {
+  //   path: 'shop',
+  //   component: LayoutShopComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       loadChildren: () =>
+  //         import('../app/shop/shop.module').then((m) => m.ShopModule),
+  //     },
+  //   ],
+  // },
 
   // default router
   {
     path: '**',
     redirectTo: '/authen/404',
   },
+  {
+    path: 'admin-lay',
+    component:LayoutAdminComponent
+  }
 ];
 
 @NgModule({

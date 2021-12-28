@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout-admin.component.css']
 })
 export class LayoutAdminComponent implements OnInit {
-
+  isCollapsed = false;
   constructor() { }
 
   ngOnInit(): void {
