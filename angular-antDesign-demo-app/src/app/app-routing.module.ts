@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { LayoutAuthenComponent } from './layouts/layout-authen/layout-authen.component';
+import { LayoutsModule } from './layouts/layouts.module';
 
 //import component
 
@@ -28,7 +29,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'admin',
+   path: 'admin',
     component: LayoutAdminComponent,
     children: [
       {
@@ -39,31 +40,20 @@ const routes: Routes = [
     ],
   },
 
-  // {
-  //   path: 'shop',
-  //   component: LayoutShopComponent,
-  //   children: [
-  //     {
-  //       path: '',
-  //       loadChildren: () =>
-  //         import('../app/shop/shop.module').then((m) => m.ShopModule),
-  //     },
-  //   ],
-  // },
-
-  // default router
+ 
   {
     path: '**',
     redirectTo: '/authen/404',
-  },
-  {
-    path: 'admin-lay',
-    component:LayoutAdminComponent
   }
-];
+  
+]
+
+const MODULES = [
+  LayoutsModule
+]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
+  imports: [...MODULES,RouterModule.forRoot(routes, {
     useHash: true,
     preloadingStrategy: PreloadAllModules
   }),],
@@ -71,15 +61,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule {}
 
-/*
-{
-  path: 'auth',
-  component: AuthLayoutComponent,
-  children: [
-    {
-      path: '',
-      loadChildren: () => import('./module/oauth2/oauth2.module').then(m => m.OAuth2Module),
-    },
-  ],
-},
-*/
+ 
+

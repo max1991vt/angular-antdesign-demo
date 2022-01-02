@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from '../authen/register/register.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ZoroAntdModule } from '../zoro-antd.module';
-import { LayoutAuthenComponent } from '../layouts/layout-authen/layout-authen.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
@@ -28,7 +27,6 @@ const routes: Routes = [
   }
 ]
 const COMPONENTS = [
-  LayoutAuthenComponent,
   RegisterComponent,
   LoginComponent, 
   ForgotPasswordComponent, 

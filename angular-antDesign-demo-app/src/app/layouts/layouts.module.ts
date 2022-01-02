@@ -13,6 +13,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { ZoroAntdModule } from '../zoro-antd.module';
+import { RouterModule } from '@angular/router';
+
+import en from '@angular/common/locales/en';
+
+import { NZ_ICONS } from 'ng-zorro-antd/icon';
+import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
+import { IconDefinition } from '@ant-design/icons-angular';
+import * as AllIcons from '@ant-design/icons-angular/icons';
 
 const COMPONENTS = [
   LayoutAuthenComponent,
@@ -30,13 +38,22 @@ const MODULES = [
   BrowserAnimationsModule,
   ScrollingModule,
   DragDropModule,
+  RouterModule, 
   ZoroAntdModule
   
 ]
 
+registerLocaleData(en);
+
+const antDesignIcons = AllIcons as {
+  [key: string]: IconDefinition;
+};
+const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key])
+
 @NgModule({
   declarations: [...COMPONENTS],
   imports: [...MODULES],
-  exports: [...COMPONENTS]
+  exports: [...COMPONENTS],
+  providers: [ { provide: NZ_I18N, useValue: en_US }, { provide: NZ_ICONS, useValue: icons } ]
 })
 export class LayoutsModule { }

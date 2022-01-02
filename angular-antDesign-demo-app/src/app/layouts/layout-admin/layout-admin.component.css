@@ -1,3 +1,6 @@
+.body-layout-admin{
+  min-height:  100%;
+}
 .trigger {
     font-size: 18px;
     line-height: 64px;
@@ -33,6 +36,9 @@
     padding: 24px;
     background: #fff;
     min-height: 360px;
+  }
+  .icon-li{
+    margin-right: 15px;
   }
 
   nz-footer {
