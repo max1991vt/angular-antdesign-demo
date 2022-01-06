@@ -1,0 +1,6 @@
+.body {
+    padding: 24px;
+    background: rgb(0, 0, 0);
+    min-height: 360px;
+    min-width: 100%;
+  }

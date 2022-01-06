@@ -2,25 +2,31 @@
 
 <nz-layout class="body-layout-admin">
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="logo"></div>
+    <div class="logo">
+      <img
+      nz-image
+      nzSrc="../../../assets/img/logo.png"
+      alt=""
+    />
+    </div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
       <li nz-submenu nzTitle="Thành viên" nzIcon="user">
         <ul>
-          <li nz-menu-item> <i class="icon-li" nz-icon nzType="table" nzTheme="outline"></i> Quản lý nhân viên</li>
-          <li nz-menu-item> <i class="icon-li" nz-icon nzType="table" nzTheme="outline"></i> Bộ phận</li>
-          <li nz-menu-item> <i class="icon-li" nz-icon nzType="table" nzTheme="outline"></i> Quản lý</li>
+          <li nz-menu-item routerLink="/admin/khach-hang"> <i class="icon-li" nz-icon nzType="table" nzTheme="outline"></i> Nhân viên</li>
+          <li nz-menu-item> <i class="icon-li" nz-icon nzType="table" nzTheme="outline"></i> Cộng tác viên</li>
+          <li nz-menu-item> <i class="icon-li" nz-icon nzType="table" nzTheme="outline"></i> Khách hàng</li>
         </ul>
       </li>
       <li nz-submenu nzTitle="Sản phẩm" nzIcon="inbox">
         <ul>
-          <li nz-menu-item> <i class="icon-li" nz-icon nzType="table" nzTheme="outline"></i> Quản lý</li>
-          <li nz-menu-item> <i class="icon-li" nz-icon nzType="table" nzTheme="outline"></i> Quản lý</li>
+          <li nz-menu-item> <i class="icon-li" nz-icon nzType="table" nzTheme="outline"></i> Sản phẩm</li>
+          <li nz-menu-item> <i class="icon-li" nz-icon nzType="table" nzTheme="outline"></i> Category</li>
         </ul>
       </li>
       <li nz-submenu nzTitle="File" nzIcon="folder">  
         <ul>
-          <li nz-menu-item>Team 1</li>
-          <li nz-menu-item>Team 2</li>
+          <li nz-menu-item>Hình ảnh</li>
+          <li nz-menu-item>Video</li>
         </ul>
       </li>
     </ul>
@@ -39,9 +45,9 @@
         <nz-breadcrumb-item>User</nz-breadcrumb-item>
         <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
       </nz-breadcrumb>
-      <div class="inner-content">Bill is a cat.</div>
     </nz-content>
   </nz-layout>
 </nz-layout>
 
-<!--End sidebar -->
+<!-- End sidebar -->
+
