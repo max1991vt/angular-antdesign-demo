@@ -7,9 +7,10 @@ import { EmployeesAdminComponent } from './employees-admin/employees-admin.compo
 import { CollaboratorsAdminComponent } from './collaborators-admin/collaborators-admin.component';
 import { CategorysAdminComponent } from './categorys-admin/categorys-admin.component';
 import { DepotsAdminComponent } from './depots-admin/depots-admin.component';
+import { ZoroAntdModule } from '../zoro-antd.module';
 const routes: Routes = [
 {
-  path: 'khach-hang',
+  path: '',
   component: UserAdminComponent,
 },
 {
@@ -40,10 +41,12 @@ const COMPONENTS = [
   EmployeesAdminComponent,
   CollaboratorsAdminComponent,
   CategorysAdminComponent,
-  DepotsAdminComponent
+  DepotsAdminComponent,
+
 ]
 const MODULES = [
   CommonModule,
+  ZoroAntdModule,
 ]
 @NgModule({
   declarations: [...COMPONENTS],
